@@ -28,3 +28,25 @@ let bukvaY = milk.includes('у');
 let bukvaM = milk.includes('м');
 console.log('Есть ли "у"?', bukvaY);  // false
 console.log('Есть ли "м"?', bukvaM);  // true
+
+
+
+let hello = 'привет';
+let veterinar = 'ветеринар';
+console.log('Начинается ли слово "привет" с "вет"?')
+console.log(hello.startsWith('вет')); // false
+console.log('Начинается ли слово "ветеринар" с "вет"?')
+console.log(veterinar.startsWith('вет')); // true
+
+
+
+const test = 'this_is_an_example_string';
+const words = test.split('_');
+console.log(words);
+
+
+
+const name = 'Ruslan';
+const message = `Добро пожаловать, ${name}, благодарим за регистрацию!
+Надеемся, Вам понравится`;
+console.log(message);
