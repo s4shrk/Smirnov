@@ -1,81 +1,81 @@
-/*
-const a = 10; // присваиваем переменой "а" неизменное значение 10
-
-if (a === 2 || 3) {
-    console.log(-1);
-} // "а" не равняется 2, значит false || 3 - true - ture, выводим "-1"
-
-if (a === 2 || a === 3) {
-    console.log(0);
-} // false || false, ничего не выводим
-
-if (10 % 1) {
-    console.log(1);
-} // 10 делится на 1, остаток будет "0" - это false, ничего не выводим
-
-if (10 % 0) {
-    console.log(2); // nan, false
-} else if (10) {
-    console.log(3); // true, выведем "3"
-} else if (true) { // не проверяется, true был выше
-    console.log(4);
-}
-
-let g = ''; //false, ибо пустая строка
-
-
-if (g) { //не работает, ибо фолс
-    console.log(5);
-} else { // выводим 6
-    console.log(6);
-}
-
-if (undefined) {
-    console.log(7); //undefined это false
-}
-
-if ('0') { // 0 в строке это true
-    console.log(8); // выводим 8
-} else if ('') {
-    console.log(9); // первое тру, остальные не чекаем
+/*// "Положительное или нет"
+let num = Math.floor(Math.random() * 5) - 2;
+console.log(`Сгенерировано число: ${num}`);
+if (num > 0) {
+    console.log("положительное");
+} else if (num < 0) {
+    console.log("отрицательное");
 } else {
-    console.log('a');
+    console.log("null");
 }
 
-if (!'0') { //false, берем строку с elser
-    console.log('b');
-} else {
-    console.log('c'); // выводим с
-}
 
-if (!!'' || !!0 || !!1) { // false false true -> true
-    console.log('d'); // выводим d
-}
-
-if (undefined || false || '' || 0) { // all false
-    console.log('e');
-} else if (!false && (0 || '0')) { // true and true -> true
-    console.log('f'); // выводим f, далее не чекаем
-} else {
-    console.log('g');
-}
+// Что делает этот код?
+const age = Math.round(Math.random() * 90); // генерим рандом число, после 0.5 округляем вверх, например 85 (до 90)
+console.log(`${age >= 18 ? '' : 'не'}совершеннолетний`) // если число 18 или более - совершеннолетний, если менее несовершеннолетний
+// код нужен для проверки возраста
 */
-const a = 0;
-const b = 1;
-let c;
 
-console.log(a == '0' ? 'h' : 'i'); // h
-console.log(!(a > b) ? 'j' : 'k'); // j
-console.log(0 ? 'l' : 'm'); // m
-console.log(!0 ? 'n' : 'o'); //n
-console.log((null === undefined || 11 % 5) && (a > b || !!true) ? 'n' : 'o'); /* (false ||
-1) and (false || true) = true and true = n */
-console.log('abc' == 'ABC' ? 'p' : 'q'); // q
-console.log('false' ? 'r' : 's'); // r
-console.log('false' == false ? 't' : 'u'); // false - u
-console.log(Number('one') ? 'v' : 'w'); // false - w
-console.log(c ? 'x' : 'y'); // не совсем понял почему y - переменная не объявлена
-/*console.log(null == undefined ? 'z' : '🫡'); выведет 🫡 */
+let fullname = 'Alexander Adams';
+let surname = '';
+
+const newLine = '\n';
+
+const threshold = 10;
+
+if (fullname.length > threshold) {
+    console.log(`У ${fullname} длинное имя, оно превышает ${threshold} знаков`, newLine);
+
+    fullname.toUpperCase();
+
+    const letter1 = 'M';
+    if (fullname.indexOf(letter1) !== -1) {
+        console.log(`Буква "${letter1}" найдена`);
+    } else {
+        console.log(`Буква "${letter1}" не найдена`);
+    }
+
+    const letter2 = 'R';
+    if (fullname.toUpperCase().includes(letter2)) {
+        console.log(`Буква "${letter2}" найдена`, newLine);
+    } else {
+        console.log(`Буква "${letter2}" не найдена`);
+    }
+
+    fullname = '              ';
+
+    if (surname) {
+        console.log(`Его фамилия: ${surname}`, newLine);
+    } else {
+        surname = 'Себастьянов';
+    }
+}
+
+if (fullname.trim().length) {
+    console.log(`Осталось имя: ${fullname}`, newLine);
+} else {
+    console.log('Имя пустое', newLine);
+}
+
+const start = 2;
+const end = 5;
+
+let index = start;
+const phrase = surname.at(index++) + surname.at(index++) + surname.at(index++);
+
+if (surname.slice(start, index) === phrase) {
+    console.log(`"${phrase}" действительно лежит внутри "${surname}" между ${start} и ${end} символами`, newLine);
+}
+
+const star = '*';
+const underscore = '_';
+const count = 3 + Math.round(Math.random() * 3);
+
+const prettified = `${star.repeat(count)}-${surname}-${star.repeat(count)}`;
+
+console.log(prettified);
+console.log(prettified.replaceAll(star, underscore));
 
 
 
+Math.floor(Math.random() )
