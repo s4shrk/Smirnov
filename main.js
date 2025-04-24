@@ -16,7 +16,7 @@ console.log(`${age >= 18 ? '' : 'не'}совершеннолетний`) // е�
 // код нужен для проверки возраста
 */
 
-let fullname = 'Alexander Adams';
+/* let fullname = 'Alexander Adams';
 let surname = '';
 
 const newLine = '\n';
@@ -78,4 +78,7 @@ console.log(prettified.replaceAll(star, underscore));
 
 
 
-Math.floor(Math.random() )
+Math.floor(Math.random() )*/
+
+const g = 100+400;
+console.log(g)
