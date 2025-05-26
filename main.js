@@ -129,7 +129,7 @@ console.log(result);
 */
 
 
-
+/*
 const arr = [1.1 , 2.2, -2, 3.3, -1, 5.5, 5.99, 7.49, 7.9999, -2.2, -3];
 // ищем все индексы положительных чисел
 const positiveIndices = [];
@@ -163,3 +163,131 @@ for (let i = 1; i <= h; i++) {
     const line = ' '.repeat(spaces) + '*'.repeat(stars);
     console.log(line);
 }
+*/
+
+
+
+const matrix = [
+    ['Id', 'Title', 'Description'],
+    [1, 'Title-1', 'Description-1'],
+    [2, 'Title-2', 'Description-2'],
+    [3, 'Title-3', 'Description-3', 'Поле с багом'],
+    [4, 'Title-4', 'Description-4'],
+    [5, 'Title-5', 'Description-5'],
+    [6, 'Title-6', 'Description-6', 'Поле с багом'],
+];
+for (let i = 0; i < matrix.length; i++) {
+    let rowString = '';
+    for (let j = 0; j < matrix[i].length; j++) {
+        rowString += matrix[i][j] + '\t';
+    }
+    console.log(rowString);
+}
+
+
+
+const users = [
+    { name: 'Alice', age: 25 },
+    { name: 'Bob', age: 30 },
+    { name: 'Charlie', age: 25 },
+    { name: 'Diana', age: 35 },
+    { name: 'Eve', age: 30 },
+    { name: 'Frank', age: 28 },
+    { name: 'Grace', age: 25 },
+    { name: 'Hannah', age: 41 },
+    { name: 'Ivy', age: 30 },
+    { name: 'Jack', age: 28 },
+];
+
+const counter = {}; // объект для подсчета кол-ва каждого возраста
+// подсчет кол-ва каждого возраста
+for (let i = 0; i < users.length; i++) {
+    const age = users[i].age;
+    if (counter[age]) {
+        counter[age]++;
+    } else {
+        counter[age] = 1;
+    }
+}
+for (const age in counter) {
+    console.log(`Возраст=${age}. Количество людей=${counter[age]}`);
+}
+
+
+
+const mary = {
+    name: 'Mary',
+    wantApples: 2,
+};
+const alex = {
+    name: 'Alex',
+    wantApples: 1,
+};
+const mike = {
+    name: 'Mike',
+    wantApples: 5,
+};
+const brown = {
+    name: 'Brown',
+    wantApples: 4,
+};
+const people = [mary, alex, mike, brown];
+const apples = 11;
+const happy = [];
+const notHappy = [];
+
+let totalPeople = people.length;
+// распределяем яблоки поровну
+let applesPerPerson = Math.floor(apples / totalPeople);
+// в цикле for of распределяем яблоки и определяем счастье
+for (const person of people) {
+    // каждому человеку достается applesPerPerson яблок
+    person.eaten = applesPerPerson;
+    // определяем, счастлив ли человек
+    person.isHappy = person.eaten >= person.wantApples;
+    // добавляем в соответствующий массив
+    if (person.isHappy) {
+        happy.push(person);
+    } else {
+        notHappy.push(person);
+    }
+}
+console.log('Довольные:', happy);
+console.log('Недовольные:', notHappy);
+
+
+
+const user = {
+    example: [1, 2, 3],
+    'X-Address': {
+        street: 'Ленина',
+        house: '10-Б',
+    },
+    nickname: null,
+    permissions: [true, false],
+    age: 101,
+    emails: ['alice@example.com', 'bob@example.com', 'charlie@example.com', 'peter@example.com'],
+    name: 'Peter Charles',
+    isAdult: true,
+    now: new Date().toISOString(),
+};
+// инициализируем переменные для хранения максимальной длины и последнего элемента
+let maxLength = 0;
+let lastElement = null;
+// перебираем все свойства объекта
+for (const key in user) {
+    const value = user[key];
+    // проверяем, является ли значение массивом
+    if (Array.isArray(value)) {
+        // если текущая длина массива больше сохраненной, обновляем значения
+        if (value.length > maxLength) {
+            maxLength = value.length;
+            lastElement = value[value.length -1];
+        }
+    }
+}
+// результат
+console.log(`Максимальная длина: ${maxLength}. Последний элемент: ${lastElement}`);
+
+
+
